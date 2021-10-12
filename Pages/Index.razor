@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 
 <SfChart Title="Sales History of the Product">
     <ChartSeriesCollection>
@@ -9,22 +9,32 @@
             </ChartAxisCrosshairTooltip>
         </ChartPrimaryXAxis>
         <ChartPrimaryYAxis Title="Sales">
+            <ChartAxisCrosshairTooltip Enable="true" Fill="#C1272D">
+                <ChartCrosshairTextStyle Size="14px" Color="#FFFFFF"></ChartCrosshairTextStyle>
+            </ChartAxisCrosshairTooltip>
         </ChartPrimaryYAxis>
         <ChartSeries DataSource="@ChartData" XName="Date" YName="Sales" Name="John"
                      Type="ChartSeriesType.Line">
         </ChartSeries>
-        <ChartSeries Type="ChartSeriesType.Line" DataSource="@ChartData" XName="Date" YName="Sales1" 
-                     Name="Andrew"></ChartSeries>
-        <ChartSeries Type="ChartSeriesType.Line" DataSource="@ChartData" XName="Date" YName="Sales2"
-                     Name="Thomas"></ChartSeries>
+
     </ChartSeriesCollection>
     <ChartCrosshairSettings Enable="true" LineType="LineType.Vertical">
-
     </ChartCrosshairSettings>
-    <ChartTooltipSettings Enable="true" Shared="true"
-                          Format="${series.name} : ${point.x} : ${point.y}">
 
-    </ChartTooltipSettings>
+    @*Trackball feature code*@
+
+    @*<ChartSeries DataSource="@ChartData" XName="Date" YName="Sales" Name="John"
+                     Type="ChartSeriesType.Line">
+        </ChartSeries>
+        <ChartSeries Type="ChartSeriesType.Line" DataSource="@ChartData" XName="Date" YName="Sales1"
+                     Name="Andrew"></ChartSeries>
+        <ChartSeries Type="ChartSeriesType.Line" DataSource="@ChartData" XName="Date" YName="Sales2"
+                     Name="Thomas"></ChartSeries>*@
+
+    @*<ChartTooltipSettings Enable="true" Shared="true"
+                              Format="${series.name} : ${point.x} : ${point.y}">
+
+        </ChartTooltipSettings>*@
 </SfChart>
 
 @code {
@@ -33,23 +43,47 @@
     {
         public DateTime Date { get; set; }
         public double Sales { get; set; }
-        public double Sales1 { get; set; }
-        public double Sales2 { get; set; }
     }
 
     List<ChartDataModel> ChartData = new List<ChartDataModel>
     {
-        new ChartDataModel { Date = new DateTime(2011, 01, 01), Sales = 80, Sales1 = 60, Sales2 = 55 },
-        new ChartDataModel { Date = new DateTime(2012, 01, 01), Sales = 92, Sales1 = 70, Sales2 = 35 },
-        new ChartDataModel { Date = new DateTime(2013, 01, 01), Sales = 78, Sales1 = 40, Sales2 = 25},
-        new ChartDataModel { Date = new DateTime(2014, 01, 01), Sales = 85, Sales1 = 30, Sales2 = 15 },
-        new ChartDataModel { Date = new DateTime(2015, 01, 01), Sales = 52, Sales1 = 20, Sales2 = 45 },
-        new ChartDataModel { Date = new DateTime(2016, 01, 01), Sales = 64, Sales1 = 50, Sales2 = 60 },
-        new ChartDataModel { Date = new DateTime(2017, 01, 01), Sales = 87, Sales1 = 65, Sales2 = 83 },
-        new ChartDataModel { Date = new DateTime(2018, 01, 01), Sales = 75, Sales1 = 55, Sales2 = 35 },
-        new ChartDataModel { Date = new DateTime(2019, 01, 01), Sales = 89, Sales1 = 65, Sales2 = 75 },
-        new ChartDataModel { Date = new DateTime(2020, 01, 01), Sales = 83, Sales1 = 41, Sales2 = 65 },
-        new ChartDataModel { Date = new DateTime(2021, 01, 01), Sales = 91, Sales1 = 63, Sales2 = 59 }
+        new ChartDataModel { Date = new DateTime(2011, 01, 01), Sales = 80 },
+        new ChartDataModel { Date = new DateTime(2012, 01, 01), Sales = 92 },
+        new ChartDataModel { Date = new DateTime(2013, 01, 01), Sales = 78 },
+        new ChartDataModel { Date = new DateTime(2014, 01, 01), Sales = 85 },
+        new ChartDataModel { Date = new DateTime(2015, 01, 01), Sales = 52 },
+        new ChartDataModel { Date = new DateTime(2016, 01, 01), Sales = 64 },
+        new ChartDataModel { Date = new DateTime(2017, 01, 01), Sales = 87 },
+        new ChartDataModel { Date = new DateTime(2018, 01, 01), Sales = 75 },
+        new ChartDataModel { Date = new DateTime(2019, 01, 01), Sales = 89 },
+        new ChartDataModel { Date = new DateTime(2020, 01, 01), Sales = 83 },
+        new ChartDataModel { Date = new DateTime(2021, 01, 01), Sales = 91 }
 
     };
+
+    // Trackball data source*@
+
+    //public class ChartDataModel
+    //{
+    //    public DateTime Date { get; set; }
+    //    public double Sales { get; set; }
+    //    public double Sales1 { get; set; }
+    //    public double Sales2 { get; set; }
+    //}
+
+    //List<ChartDataModel> ChartData = new List<ChartDataModel>
+    //{
+    //    new ChartDataModel { Date = new DateTime(2011, 01, 01), Sales = 80, Sales1 = 60, Sales2 = 55 },
+    //    new ChartDataModel { Date = new DateTime(2012, 01, 01), Sales = 92, Sales1 = 70, Sales2 = 35 },
+    //    new ChartDataModel { Date = new DateTime(2013, 01, 01), Sales = 78, Sales1 = 40, Sales2 = 25},
+    //    new ChartDataModel { Date = new DateTime(2014, 01, 01), Sales = 85, Sales1 = 30, Sales2 = 15 },
+    //    new ChartDataModel { Date = new DateTime(2015, 01, 01), Sales = 52, Sales1 = 20, Sales2 = 45 },
+    //    new ChartDataModel { Date = new DateTime(2016, 01, 01), Sales = 64, Sales1 = 50, Sales2 = 60 },
+    //    new ChartDataModel { Date = new DateTime(2017, 01, 01), Sales = 87, Sales1 = 65, Sales2 = 83 },
+    //    new ChartDataModel { Date = new DateTime(2018, 01, 01), Sales = 75, Sales1 = 55, Sales2 = 35 },
+    //    new ChartDataModel { Date = new DateTime(2019, 01, 01), Sales = 89, Sales1 = 65, Sales2 = 75 },
+    //    new ChartDataModel { Date = new DateTime(2020, 01, 01), Sales = 83, Sales1 = 41, Sales2 = 65 },
+    //    new ChartDataModel { Date = new DateTime(2021, 01, 01), Sales = 91, Sales1 = 63, Sales2 = 59 }
+
+    //};
 }
