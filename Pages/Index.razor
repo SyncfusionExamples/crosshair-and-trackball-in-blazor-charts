@@ -1,8 +1,7 @@
 @page "/"
 
 <SfChart Title="Sales History of the Product">
-    <ChartSeriesCollection>
-        <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"
+     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"
                            Title="Years" LabelFormat="yyyy" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
             <ChartAxisCrosshairTooltip Enable="true" Fill="#C1272D">
                 <ChartCrosshairTextStyle Size="14px" Color="#FFFFFF"></ChartCrosshairTextStyle>
@@ -13,6 +12,7 @@
                 <ChartCrosshairTextStyle Size="14px" Color="#FFFFFF"></ChartCrosshairTextStyle>
             </ChartAxisCrosshairTooltip>
         </ChartPrimaryYAxis>
+    <ChartSeriesCollection>
         <ChartSeries DataSource="@ChartData" XName="Date" YName="Sales" Name="John"
                      Type="ChartSeriesType.Line">
         </ChartSeries>
