@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrosshairandTrackball", "CrosshairandTrackball.csproj", "{A3A3AE18-79F1-48E6-BD97-A24C6B1A8F51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3A3AE18-79F1-48E6-BD97-A24C6B1A8F51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3A3AE18-79F1-48E6-BD97-A24C6B1A8F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3A3AE18-79F1-48E6-BD97-A24C6B1A8F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3A3AE18-79F1-48E6-BD97-A24C6B1A8F51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B92A14A-B104-4AC4-9043-090487BE0C8F}
+	EndGlobalSection
+EndGlobal
