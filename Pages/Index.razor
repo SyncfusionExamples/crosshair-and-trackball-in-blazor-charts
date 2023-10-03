@@ -1,17 +1,17 @@
-@page "/"
+﻿@page "/"
 
 <SfChart Title="Sales History of the Product">
-     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"
-                           Title="Years" LabelFormat="yyyy" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
-            <ChartAxisCrosshairTooltip Enable="true" Fill="#C1272D">
-                <ChartCrosshairTextStyle Size="14px" Color="#FFFFFF"></ChartCrosshairTextStyle>
-            </ChartAxisCrosshairTooltip>
-        </ChartPrimaryXAxis>
-        <ChartPrimaryYAxis Title="Sales">
-            <ChartAxisCrosshairTooltip Enable="true" Fill="#C1272D">
-                <ChartCrosshairTextStyle Size="14px" Color="#FFFFFF"></ChartCrosshairTextStyle>
-            </ChartAxisCrosshairTooltip>
-        </ChartPrimaryYAxis>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"
+                       Title="Years" LabelFormat="yyyy" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
+        <ChartAxisCrosshairTooltip Enable="true" Fill="#C1272D">
+            <ChartCrosshairTextStyle Size="14px" Color="#FFFFFF"></ChartCrosshairTextStyle>
+        </ChartAxisCrosshairTooltip>
+    </ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Title="Sales">
+        <ChartAxisCrosshairTooltip Enable="true" Fill="#C1272D">
+            <ChartCrosshairTextStyle Size="14px" Color="#FFFFFF"></ChartCrosshairTextStyle>
+        </ChartAxisCrosshairTooltip>
+    </ChartPrimaryYAxis>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ChartData" XName="Date" YName="Sales" Name="John"
                      Type="ChartSeriesType.Line">
@@ -24,17 +24,17 @@
     @*Trackball feature code*@
 
     @*<ChartSeries DataSource="@ChartData" XName="Date" YName="Sales" Name="John"
-                     Type="ChartSeriesType.Line">
-        </ChartSeries>
-        <ChartSeries Type="ChartSeriesType.Line" DataSource="@ChartData" XName="Date" YName="Sales1"
-                     Name="Andrew"></ChartSeries>
-        <ChartSeries Type="ChartSeriesType.Line" DataSource="@ChartData" XName="Date" YName="Sales2"
-                     Name="Thomas"></ChartSeries>*@
+    Type="ChartSeriesType.Line">
+    </ChartSeries>
+    <ChartSeries Type="ChartSeriesType.Line" DataSource="@ChartData" XName="Date" YName="Sales1"
+    Name="Andrew"></ChartSeries>
+    <ChartSeries Type="ChartSeriesType.Line" DataSource="@ChartData" XName="Date" YName="Sales2"
+    Name="Thomas"></ChartSeries>*@
 
     @*<ChartTooltipSettings Enable="true" Shared="true"
-                              Format="${series.name} : ${point.x} : ${point.y}">
+    Format="${series.name} : ${point.x} : ${point.y}">
 
-        </ChartTooltipSettings>*@
+    </ChartTooltipSettings>*@
 </SfChart>
 
 @code {
