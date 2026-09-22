@@ -2,7 +2,7 @@
 
 ## Overview
 
-This sample demonstrates how to enable and customize crosshair and trackball functionality in the Syncfusion Blazor Chart component. The application shows how users can inspect chart data interactively by moving the pointer across chart series and viewing contextual information through crosshair and trackball elements. The sample also includes crosshair tooltip customization, allowing developers to tailor the display of chart data during user interaction.
+This sample demonstrates how to enable and customize crosshair and trackball functionality in the Syncfusion [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component. The application shows how users can inspect chart data interactively by moving the pointer across chart series and viewing contextual information through crosshair and trackball elements. The sample also includes crosshair tooltip customization, allowing developers to tailor the display of chart data during user interaction.
 
 The project serves as a reference implementation for adding advanced chart navigation and data-inspection features to Syncfusion Blazor Charts.
 
