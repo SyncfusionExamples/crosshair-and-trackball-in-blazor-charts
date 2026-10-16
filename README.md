@@ -46,16 +46,6 @@ dotnet run
 
 4. Open the local application URL displayed after the application starts.
 
-## Project Structure
-
-- `Pages/` — contains the Razor page that renders the Syncfusion Chart and implements crosshair and trackball functionality.
-- `Data/` — contains the sample chart data models and data source used by the chart implementation.
-- `Shared/` — contains shared layout and reusable Blazor components used by the application.
-- `wwwroot/` — contains static assets, styles, and client-side resources required by the sample.
-- `Program.cs` — configures services and application startup.
-- `CrosshairandTrackball.csproj` — defines the Blazor application configuration and Syncfusion package references.
-- Additional files within the Pages and Data folders support chart rendering, tooltip customization, crosshair behavior, and trackball interaction.
-
 ## Support and Feedback
 
 - For general product questions, visit the [Syncfusion Community Forum](https://www.syncfusion.com/forums) or [Syncfusion Support](https://www.syncfusion.com/support).
